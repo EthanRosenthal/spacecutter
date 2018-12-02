@@ -1,0 +1,6 @@
+*.pyc
+.DS_STORE
+.idea/
+.pytest_cache
+.coverage
+.ipynb_checkpoints/

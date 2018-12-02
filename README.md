@@ -1,6 +1,6 @@
 # medallion
 
-`medallion` is a library for implementing ordinal regression models in PyTorch. The library consists of models and loss functions. It is recommended to use the [skorch](http://skorch.readthedocs.io/) to wrap the models to make them compatible with scikit-learn.
+`medallion` is a library for implementing ordinal regression models in PyTorch. The library consists of models and loss functions. It is recommended to use [skorch](http://skorch.readthedocs.io/) to wrap the models to make them compatible with scikit-learn.
 
 ## Installation
 

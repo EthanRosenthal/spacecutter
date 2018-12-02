@@ -1,3 +1,2 @@
 numpy==1.15.4
-skorch==0.4.0
 torch==0.4.1

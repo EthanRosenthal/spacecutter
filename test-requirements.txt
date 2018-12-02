@@ -1,3 +1,4 @@
 flake8==3.6.0
 pytest==4.0.1
 pytest-cov==2.6.0
+skorch==0.4.0

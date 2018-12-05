@@ -48,3 +48,9 @@ class Test_cumulative_link_loss:
         # picks out log(0.5) and log(0.3), multiplies by 10 and 20, respectively.
         expected = pytest.approx(15.5054639)
         assert output.item() == expected
+
+    def test_extremely_small_loss_is_clipped(self):
+        y_true = torch.LongTensor([[1],])
+        y_pred = torch.FloatTensor([[0.25, 1e-20, 0.75]])
+        output = losses.cumulative_link_loss(y_pred, y_true)
+        assert output.item() < 35

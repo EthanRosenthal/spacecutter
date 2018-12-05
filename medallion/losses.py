@@ -64,13 +64,17 @@ def cumulative_link_loss(y_pred: torch.Tensor, y_true: torch.Tensor,
     loss: torch.Tensor
 
     """
-    neg_log_likelihood = -torch.log(torch.gather(y_pred, 1, y_true))
+    eps = 1e-15
+    likelihoods = torch.clamp(torch.gather(y_pred, 1, y_true), eps, 1 - eps)
+    neg_log_likelihood = -torch.log(likelihoods)
+
     if class_weights is not None:
         # Make sure it's on the same device as neg_log_likelihood
         class_weights = torch.as_tensor(class_weights,
                                         dtype=neg_log_likelihood.dtype,
                                         device=neg_log_likelihood.device)
         neg_log_likelihood *= class_weights[y_true]
+
     loss = _reduction(neg_log_likelihood, reduction)
     return loss
 

@@ -1,3 +1,5 @@
+from copy import deepcopy
+
 import torch
 from torch import nn
 
@@ -72,7 +74,7 @@ class OrdinalLogisticModel(nn.Module):
                  init_cutpoints: str = 'ordered') -> None:
         super().__init__()
         self.num_classes = num_classes
-        self.predictor = predictor
+        self.predictor = deepcopy(predictor)
         self.link = LogisticCumulativeLink(self.num_classes,
                                            init_cutpoints=init_cutpoints)
 

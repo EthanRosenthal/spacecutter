@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 import torch
 
-from medallion import losses
+from spacecutter import losses
 
 
 class Test_reduction:

@@ -4,10 +4,8 @@
 
 ## Installation
 
-Install locally via
-
 ```bash
-pip install -e .
+pip install spacecutter
 ```
 
 ## Usage

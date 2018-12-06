@@ -1,7 +1,7 @@
 import os
 from setuptools import setup, find_packages
 
-from medallion import __version__
+from spacecutter import __version__
 
 
 here = os.path.abspath(os.path.dirname(__file__))
@@ -17,12 +17,12 @@ with open(os.path.join(here, 'test-requirements.txt')) as f:
 
 
 setup(
-    name='medallion',
+    name='spacecutter',
     version=__version__,
     description='Ordinal regression models in PyTorch',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/EthanRosenthal/medallion',
+    url='https://github.com/EthanRosenthal/spacecutter',
     author='Ethan Rosenthal',
     author_email='ethanrosenthal@gmail.com',
     classifiers=[

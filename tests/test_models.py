@@ -3,9 +3,9 @@ from skorch import NeuralNet
 import torch
 from torch import nn
 
-from medallion.callbacks import AscensionCallback
-from medallion.losses import CumulativeLinkLoss
-from medallion.models import OrdinalLogisticModel
+from spacecutter.callbacks import AscensionCallback
+from spacecutter.losses import CumulativeLinkLoss
+from spacecutter.models import OrdinalLogisticModel
 
 
 SEED = 666

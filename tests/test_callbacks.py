@@ -1,8 +1,8 @@
 import torch
 from torch import nn
 
-from medallion import callbacks
-from medallion.models import OrdinalLogisticModel
+from spacecutter import callbacks
+from spacecutter.models import OrdinalLogisticModel
 
 
 def test_clip_ensures_sorted_cutpoints():

@@ -1,7 +1,7 @@
 from skorch.callbacks import Callback
 from torch.nn import Module
 
-from medallion.models import LogisticCumulativeLink
+from spacecutter.models import LogisticCumulativeLink
 
 
 class AscensionCallback(Callback):

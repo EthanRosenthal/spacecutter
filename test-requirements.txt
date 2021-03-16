@@ -1,4 +1,3 @@
-flake8
 pytest
 pytest-cov
 skorch>=0.7.0

@@ -78,5 +78,5 @@ class OrdinalLogisticModel(nn.Module):
         self.link = LogisticCumulativeLink(self.num_classes,
                                            init_cutpoints=init_cutpoints)
 
-    def forward(self, X: torch.Tensor) -> torch.Tensor:
-        return self.link(self.predictor(X))
+    def forward(self, *args, **kwargs) -> torch.Tensor:
+        return self.link(self.predictor(*args, **kwargs))
